@@ -1,0 +1,8 @@
+es:
+  activerecord:
+    models:
+      variety: Variedad
+    attributes:
+      variety:
+        name: Nombre
+        note: Nota
