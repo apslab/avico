@@ -1,0 +1,16 @@
+<%= semantic_form_for [:admin, @movement] , :html => { :multipart => true } do |f| %>
+  <%= f.semantic_errors *f.object.errors.keys %>
+  <%= f.semantic_errors %>
+  <%= f.inputs "Movements" do %>
+    <%= f.input :company %>
+    <%= f.input :variety %>
+    <%= f.input :date_since, as: :string, input_html: { class: 'datepicker' } %>
+    <%= f.input :period, as: :string, input_html: { class: 'datepicker' } %>
+    <%= f.input :quantity %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit %>
+  <% end %>
+
+<% end %>
